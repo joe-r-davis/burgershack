@@ -13,15 +13,13 @@ namespace burger_shack.Models
     [Required]
     public double Price { get; set; }
     public int KCal { get; set; }
-    public string Ingredients { get; set; }
 
-    public Burger(string name, string desc, double price, int kcal, string ingredients)
+    public Burger(string name, string desc, double price, int kcal)
     {
       Name = name;
       Description = desc;
       Price = price;
       KCal = kcal;
-      Ingredients = ingredients;
     }
   }
 
