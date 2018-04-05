@@ -44,3 +44,13 @@
 --   PRIMARY KEY (id),
 --   UNIQUE KEY email (email)
 -- )
+
+
+-- GET FROM DB_TABLE
+-- SELECT * FROM users;
+
+CREATE TABLE orders (
+    id VARCHAR(255) NOT NULL,
+    userId VARCHAR(255) NOT NULL,
+    price DOUBLE (40, 2) NOT NULL
+)
