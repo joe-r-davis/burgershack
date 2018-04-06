@@ -17,4 +17,12 @@ namespace burger_shack.Models
     public int KCal { get; set; }
   }
 
+  public class UserBurgerOrderReport 
+  {
+    public string Burger { get; set; }
+    public string Username { get; set; }
+    public string Email { get; set; }
+    public int Quantity { get; set; }
+    public int KCal { get; set; }
+  }
 }

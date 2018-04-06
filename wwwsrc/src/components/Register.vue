@@ -6,16 +6,16 @@
 
       <form class="p-4" action="#" @submit.prevent="submit">
         <div class="form-group">
-          <label class="ml-4" for="username">Name: </label>
-          <input type="text" id="username" class="form-control" v-model="user.name" placeholder="My Name">
+          <label class="ml-4" for="username" required>Name: </label>
+          <input type="text" id="username" class="form-control" v-model="user.name" placeholder="My Name" required>
         </div>
         <div class="form-group">
           <label class="ml-4" for="email">Email: </label>
-          <input type="text" id="email" class="form-control" v-model="user.email" placeholder="my@address.com">
+          <input type="text" id="email" class="form-control" v-model="user.email" placeholder="my@address.com" required>
         </div>
         <div class="form-group">
           <label class="ml-4" for="password">Password: </label>
-          <input type="password" id="password" class="form-control" v-model="user.password" placeholder="********">
+          <input type="password" id="password" class="form-control" v-model="user.password" placeholder="********" required>
         </div>
         <button type="submit" class="btn btn-primary registerButton px-4">Register</button>
         <button class="btn btn-secondary px-4" @click="closeModal">Close</button>

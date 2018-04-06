@@ -6,12 +6,12 @@
 
       <form class="p-4" @submit.prevent="submit">
         <div class="form-group">
-          <label class="ml-4" for="email">Email:</label>
-          <input type="text" id="email" class="form-control" v-model="user.email" placeholder="my@address.com">
+          <label class="ml-4" for="email" >Email:</label>
+          <input type="text" id="email" class="form-control" v-model="user.email" placeholder="my@address.com" required>
         </div>
         <div class="form-group">
-          <label class="ml-4" for="password">Password:</label>
-          <input type="password" id="password" class="form-control" v-model="user.password" placeholder="********">
+          <label class="ml-4" for="password" >Password:</label>
+          <input type="password" id="password" class="form-control" v-model="user.password" placeholder="********" required>
         </div>
         <button class="btn btn-success signInButton px-4" type="submit">Sign in</button>
         <button class="btn btn-secondary px-4" @click="closeModal">Close</button>
