@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Data;
 using burger_shack.Models;
+using Microsoft.AspNetCore.Mvc;
 using Dapper;
 
 namespace burger_shack.Repositories
@@ -62,17 +63,26 @@ namespace burger_shack.Repositories
 
         }
 
+        public Burger Update(int id, Burger burger)
+        {
+            Burger updated = _db.QueryFirstOrDefault<Burger>(@"
+            UPDATE burgers SET
+            name = @Name,
+            description = @Description,
+            price = @Price,
+            kcal = @KCal
+            WHERE id = @id;
+            SELECT * FROM Burgers WHERE id = @id;", burger);
+            return updated;
+        }
+
         public string FindByIdAndRemove(int id)
         {
-             _db.Execute(@"
+            _db.Execute(@"
         DELETE FROM burgers WHERE id = @id
       ", new { id = id });
             return "successful deletion";
         }
-
-
-
-
 
     }
 }

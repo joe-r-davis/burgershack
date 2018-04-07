@@ -1,12 +1,12 @@
 -- --CREATE TABLE IN DB
-CREATE TABLE burgers (
-  id int NOT NULL AUTO_INCREMENT,
-  name VARCHAR(255) NOT NULL,
-  description VARCHAR(255),
-  price DOUBLE(40, 2) NOT NULL,
-  kcal int,
-  PRIMARY KEY (id)
-);
+-- CREATE TABLE burgers (
+--   id int NOT NULL AUTO_INCREMENT,
+--   name VARCHAR(255) NOT NULL,
+--   description VARCHAR(255),
+--   price DOUBLE(40, 2) NOT NULL,
+--   kcal int,
+--   PRIMARY KEY (id)
+-- );
 
 -- -- ADD ITEM TO DB_TABLE
 -- INSERT INTO burgers (
@@ -15,19 +15,19 @@ CREATE TABLE burgers (
 --   price,
 --   kcal
 -- ) VALUES (
---   "The BBQ Burger",
---   "Tasty meat with BBQ Sauce",
---   11.99,
---   2200
+--   "Big Muck",
+--   "The kind of burger a beat reporter would eat at a stakeout",
+--   12.99,
+--   2060
 -- );
 
 -- -- GET FROM DB_TABLE
--- SELECT * FROM burgers;
+SELECT * FROM burgers;
 
 -- -- EDIT RECORD
 -- UPDATE burgers SET
---   description = "Tasty meat with Pineapple!"
---   WHERE id = 1;
+--   description = "Tasty meat with Pineapple, ham and bbq sauce!"
+--   WHERE id = 2;
 
 -- -- REMOVE RECORD
 -- DELETE FROM burgers WHERE id = 1;

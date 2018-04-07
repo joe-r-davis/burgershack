@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using burger_shack.Models;
 using burger_shack.Repositories;
 using Microsoft.AspNetCore.Mvc;
+using Dapper;
 
 namespace burger_shack
 {
@@ -37,10 +38,20 @@ namespace burger_shack
             return null;
         }
 
+        [HttpPut("{id}")]
+        public Burger Put(int id, [FromBody]Burger burger)
+        {
+            if (ModelState.IsValid)
+            {
+                return _repo.Update(id, burger);
+            }
+            return null;
+        }
+
         [HttpDelete("{id}")]
         public string Delete(int id)
         {
-          return _repo.FindByIdAndRemove(id);
+            return _repo.FindByIdAndRemove(id);
         }
 
         [HttpGet("report/{userId}")]
