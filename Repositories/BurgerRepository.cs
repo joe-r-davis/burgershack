@@ -34,7 +34,7 @@ namespace burger_shack.Repositories
         {
             return _db.QueryFirstOrDefault<Burger>(@"
         SELECT * FROM burgers WHERE id = @id
-      ",new { id = @id });
+      ", new { id = id });
         }
 
         public IEnumerable<Burger> GetBurgers()
@@ -62,11 +62,12 @@ namespace burger_shack.Repositories
 
         }
 
-        public Burger FindByIdAndRemove(int id)
+        public string FindByIdAndRemove(int id)
         {
-            return _db.ExecuteScalar<Burger>(@"
-        SELECT * FROM burgers WHERE id = @id
-      ",new { id = @id });
+             _db.Execute(@"
+        DELETE FROM burgers WHERE id = @id
+      ", new { id = id });
+            return "successful deletion";
         }
 
 

@@ -1,12 +1,12 @@
 -- --CREATE TABLE IN DB
--- CREATE TABLE burgers (
---   id int NOT NULL AUTO_INCREMENT,
---   name VARCHAR(255) NOT NULL,
---   description VARCHAR(255),
---   price DOUBLE(40, 2) NOT NULL,
---   kcal int,
---   PRIMARY KEY (id)
--- );
+CREATE TABLE burgers (
+  id int NOT NULL AUTO_INCREMENT,
+  name VARCHAR(255) NOT NULL,
+  description VARCHAR(255),
+  price DOUBLE(40, 2) NOT NULL,
+  kcal int,
+  PRIMARY KEY (id)
+);
 
 -- -- ADD ITEM TO DB_TABLE
 -- INSERT INTO burgers (

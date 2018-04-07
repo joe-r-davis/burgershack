@@ -49,7 +49,5 @@ namespace burger_shack
             return _repo.GetUserBurgerReport(userId);
         }
 
-
-
     }
 }
